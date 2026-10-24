@@ -18,3 +18,23 @@ Une fois le Codespace lancé :
 ```bash
 pnpm install
 pnpm dev
+```
+
+Le serveur de développement Vite démarre automatiquement.
+
+Structure du Codespace
+
+- /src : modules JS
+- /public : assets
+- / : pages HTML
+- .github/workflows : CI/CD GitHub Pages
+
+Objectif
+
+Offrir un environnement de développement :
+- rapide
+- reproductible
+- sans configuration locale
+`
+
+---
