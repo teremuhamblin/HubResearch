@@ -1,6 +1,6 @@
 # 🧠 HubResearch
 
-Portail technique du **MantraLab v3.0**, dédié aux *explorations modernes en IA, diagnostics de modèles, cyber‑analyse et systèmes avancés*.
+Portail technique dédié aux *explorations modernes en IA, diagnostics de modèles, cyber‑analyse et systèmes avancés*.
 
 ### Pages
 ```text
