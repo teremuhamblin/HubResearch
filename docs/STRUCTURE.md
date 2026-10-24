@@ -43,6 +43,11 @@ HubResearch/
     └── workflows/
         └── deploy.yml  # Déploiement automatique sur GitHub Pages
 
+>> AJOUT DES FICHIERS DE GOUVERNANCES, CONTRIBUTIONS ETC... DANS :
+.github/
+
+---
+
 >> AJOUT DES DOSSIERS :
 - ~/assets/
 - ~/docs/
@@ -50,7 +55,7 @@ HubResearch/
 
 ---
 
-3. Description des fichiers
+3. Description des fichiers et dossiers
 
 🔹 Pages HTML
 Chaque page est un entry point Vite et représente une section du portail :
@@ -104,6 +109,85 @@ Pipeline CI/CD :
 - build Vite  
 - publication automatique sur GitHub Pages  
 - déclenché à chaque push sur main
+
+3.1 📁 Fichiers du dossier .github/
+
+🔧 1. CONTRIBUTING.md
+➡️ Règles pour contribuer au projet  
+➡️ Comment faire une PR, un commit, un fork, etc.
+
+---
+
+🛡️ 2. SECURITY.md
+➡️ Politique de sécurité  
+➡️ Comment signaler une vulnérabilité  
+➡️ Bonnes pratiques de sécurité
+
+---
+
+💬 3. SUPPORT.md
+➡️ Comment demander de l’aide  
+➡️ Types de demandes acceptées  
+➡️ Processus de support
+
+---
+
+👥 4. CODEOWNERS
+➡️ Fichier texte (sans extension)  
+➡️ Définit les propriétaires du code  
+➡️ Ceux qui doivent valider les PR sur certaines sections
+
+---
+
+📜 5. CODEOFCONDUCT.md
+➡️ Code de conduite du projet  
+➡️ Règles de comportement pour les contributeurs
+
+---
+
+🧩 6. ISSUE_TEMPLATE/
+➡️ Dossier contenant les templates d’issues  
+Exemples :  
+- bug_report.md  
+- feature_request.md  
+- config.yml
+
+---
+
+🔄 7. PULLREQUESTTEMPLATE.md
+➡️ Template pour les PR  
+➡️ Structure standard pour les contributions
+
+---
+
+⚙️ 8. workflows/
+➡️ Dossier contenant les workflows GitHub Actions  
+Exemples :  
+- deploy.yml  
+- ci.yml  
+- lint.yml
+
+---
+
+🧪 9. CODESPACE.md (optionnel mais recommandé)
+➡️ Documentation pour GitHub Codespaces  
+➡️ Configuration de l’environnement de dev
+
+---
+
+🎯 Résumé rapide (comme un ingénieur GitHub)
+
+| Fichier | Nom exact | Rôle |
+|--------|-----------|------|
+| CONTRIBUTING.md | ✔️ | Règles de contribution |
+| SECURITY.md | ✔️ | Politique de sécurité |
+| SUPPORT.md | ✔️ | Support utilisateur |
+| CODEOWNERS | ✔️ | Propriétaires du code |
+| CODEOFCONDUCT.md | ✔️ | Code de conduite |
+| ISSUE_TEMPLATE/ | ✔️ | Templates d’issues |
+| PULLREQUESTTEMPLATE.md | ✔️ | Template de PR |
+| workflows/ | ✔️ | CI/CD GitHub Actions |
+| CODESPACE.md | ✔️ | Config Codespaces |
 
 ---
 
