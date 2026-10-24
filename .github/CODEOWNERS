@@ -1,0 +1,11 @@
+# 📘 **CODEOWNERS**
+
+# Code Owners — HubResearch
+
+# Propriétaires principaux du projet
+* @teremuhamblin
+
+# Sections spécifiques
+/src/ @teremuhamblin
+/public/ @teremuhamblin
+.github/workflows/ @teremuhamblin
