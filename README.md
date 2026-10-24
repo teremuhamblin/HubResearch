@@ -54,6 +54,6 @@ Déployée automatiquement via GitHub Pages.
 HTML + CSS + JS + Vite + GitHub Actions.
 ```
 
-C’est un hub de recherche moderne et efficace.
+C’est *un hub de recherche moderne et efficace*.
 
 ---
