@@ -1,4 +1,5 @@
-HubResearch v1.6 — Diagrammes Mermaid
+# HubResearch v1.6
+- — Diagrammes Mermaid
 
 Portail d’ingénierie, d’IA et de cyber‑ops du MantraLab v3.0, présenté principalement via des diagrammes Mermaid.
 
