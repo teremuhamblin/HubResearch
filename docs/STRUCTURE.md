@@ -42,6 +42,10 @@ HubResearch/
 └── .github/
     └── workflows/
         └── deploy.yml  # Déploiement automatique sur GitHub Pages
+
+>> AJOUT DES DOSSIERS :
+- ~/assets/
+- ~/docs/
 ```
 
 ---
