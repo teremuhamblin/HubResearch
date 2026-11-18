@@ -1,59 +1,40 @@
-# 🧠 HubResearch
+### 📄 `README.md` *(mis à jour pour la **v1.7 Stable**)*
 
-Portail technique dédié aux *explorations modernes en IA, diagnostics de modèles, cyber‑analyse et systèmes avancés*.
+# 🧠 HubResearch — v1.7 Stable
 
-### Pages
-```text
-- index.html — présentation rapide et accès aux modules
-- lab.html — vision, mission, méthodologie
-- modules.html — projets actifs (MantraCore, MantraOps, MantraAI)
-- research.html — notes techniques, drafts, prototypes
-- team.html — contributeurs réels et fictifs
-- contact.html — point de contact
-- style.css — thème minimaliste moderne
-- main.js — interactions légères
-```
+Portail technique dédié aux **explorations modernes en IA, diagnostics de modèles, cyber‑analyse et systèmes avancés** (*MantraLab v3.0*).
 
-Toutes les pages sont des *entrées et déployées automatiquement via* **GitHub Pages**.
+![Version](https://img.shields.io/badge/Version-v1.7%20Stable-16A34A?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=0F172A)
+![Build](https://img.shields.io/badge/Vite-MPA%20Static-4FD1C5?style=for-the-badge&logo=vite&logoColor=0F172A&labelColor=0F172A)
+![Deploy](https://img.shields.io/badge/GitHub%20Pages-Auto%20Deploy-16A34A?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0F172A)
 
-### Développement
+## ✨ Nouveautés v1.7 Stable
+
+- **Thème Dark / Light** persistant avec respect de `prefers-reduced-motion` et accessibilité renforcée (`skip-link`, `aria-current`, navigation clavier).
+
+- **Catalogue dynamique (`modules.html` & `research.html`) :** filtres par domaine, recherche temps réel insensible aux accents, résumés dépliables et copie rapide des citations.
+
+- **Sécurité & Build :** politique **CSP** côté client, chemins relatifs compatibles GitHub Pages (`base: "./"`), vérification automatique de `dist/` dans `deploy.yml` et gouvernance `.github/`.
+
+## 📄 Pages
+
+- `index.html` — présentation rapide et accès aux axes MantraLab v3.0
+
+- `lab.html` — vision, mission, méthodologie et cycle de recherche
+
+- `modules.html` — projets actifs filtrables (`MantraCore`, `MantraOps`, `MantraAI`, `CyberOps Toolkit`)
+
+- `research.html` — notes techniques, drafts (`HR-*`), prototypes et citations
+
+- `team.html` — contributeurs réels et fictifs (voir `CONTRIBUTORS.md`)
+
+- `contact.html` — support (`SUPPORT.md`), contributions et sécurité (`.github/SECURITY.md`)
+
+## 🛠️ Développement & Build
 
 ```bash
 pnpm install
-pnpm dev
+pnpm dev      # Développement local (http://localhost:5173)
+pnpm build    # Build de production dans dist/
+pnpm preview  # Prévisualisation du build (http://localhost:4173)
 ```
-
-### Build
-
-```bash
-pnpm build
-```
-
-*Le site est statique* et peut être prévisualisé avec n’importe quel **serveur HTTP**.
-
----
-
-### 🔬 Analyse : 
-- à quoi sert **HubResearch** ?
-
-HubResearch est un portail de recherche technique, destiné à :
-```text
-1) Centraliser les projets MantraLab v3.0
-Modules, outils, frameworks (BashOps, PythonOps, ULTRA‑OPS, etc.).
-
-2) Présenter les axes de recherche
-IA, diagnostics, cyber‑analyse, modèles avancés.
-
-3) Publier des drafts techniques
-Notes, prototypes, mini‑papers interactifs.
-
-4) Offrir une vitrine publique
-Déployée automatiquement via GitHub Pages.
-
-5) Rester simple, statique, rapide
-HTML + CSS + JS + Vite + GitHub Actions.
-```
-
-C’est *un hub de recherche moderne et efficace*.
-
----
