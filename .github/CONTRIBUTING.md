@@ -1,24 +1,12 @@
-# Contribuer à HubResearch
+# 👥 Contributeurs — HubResearch (MantraLab v3.0)
 
-Merci de votre intérêt pour HubResearch v1.6.
+HubResearch rassemble des contributeurs humains et des entités/personas de recherche du **MantraLab v3.0**.
 
-## Comment contribuer
-1. Fork du dépôt  
-2. Créez une branche : `feature/nom`  
-3. Faites vos modifications  
-4. Ouvrez une Pull Request
+| Nom / Alias | Rôle | Domaine principal | Statut |
+| :--- | :--- | :--- | :--- |
+| **Aiden Flux** | Ingénieur Systèmes | `MantraCore`, `MantraOps`, architecture | Core |
+| **Astra Neural** | IA Researcher | `MantraAI`, `HR-AI-016` (drift & safety) | Recherche |
+| **ShadeVector** | Cyber Analyst | `CyberOps Toolkit`, `HR-CYB-007` (réseau) | CyberOps |
+| **GhostByte** | Ethical Hacker | Audits sécurité, divulgation & durcissement | Sécurité |
 
-## Règles
-- Code propre et documenté  
-- Pas de dépendances lourdes  
-- Respect du style minimaliste  
-- Tests pour les modules JS  
-- Pas de contenu malveillant
-
-## Commits
-Utilisez des messages clairs :
-- `feat:` nouvelle fonctionnalité  
-- `fix:` correction  
-- `docs:` documentation  
-- `style:` mise en forme  
-- `refactor:` amélioration interne
+> Vous souhaitez apparaître ici ? Ouvrez une Pull Request conformément à [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md).
