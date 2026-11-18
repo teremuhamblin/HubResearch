@@ -10,46 +10,43 @@ Ce document décrit l’architecture complète du projet HubResearch, son organi
 
 **public/** sert les fichiers tels quels à la racine (hubresearch-logo.svg, robots.txt, sitemap.xml, .nojekyll).
 
+# 📁 Structure du projet HubResearch (v1.7 Stable)
+
 ```text
 HubResearch/
-├── index.html                  # Accueil (Hero, axes, accès rapide modules & drafts)
-├── lab.html                    # Vision, mission, méthodologie MantraLab v3.0
-├── modules.html                # Projets actifs + filtres (MantraCore, MantraOps, MantraAI, BashOps, PythonOps, ULTRA-OPS)
-├── research.html               # Drafts, mini-papers, recherche & filtres par tags
-├── team.html                   # Contributeurs réels & personas/agents IA clairement badgés
-├── contact.html                # Point de contact, PGP/Security, GitHub Discussions
+├── index.html                  # Accueil : présentation rapide & accès axes MantraLab v3.0
+├── lab.html                    # Vision, méthodologie & cycle de recherche en 4 étapes
+├── modules.html                # Catalogue interactif (MantraCore, MantraOps, MantraAI, CyberOps)
+├── research.html               # Notes techniques, drafts (HR-*) & résumés dépliables
+├── team.html                   # Contributeurs réels & fictifs (liens CONTRIBUTORS.md)
+├── contact.html                # Canaux officiels, support & divulgation sécurité
 │
-├── assets/                     # Ressources gérées par Vite (CSS, JS, illustrations)
-│   ├── css/
-│   │   └── style.css           # Thème minimaliste moderne (Dark/Light, variables CSS)
-│   ├── js/
-│   │   └── main.js             # Navigation mobile, filtres, thème, copier-citation
-│   └── img/                    # Schémas techniques, diagrammes, avatars
-│
-├── public/
-│   ├── hubresearch-logo.svg
-│   ├── robots.txt              # SEO
-│   └── .nojekyll               # Évite le traitement Jekyll parasite sur GitHub Pages
-│
-├── docs/                       # Documentation interne du dépôt
-│   ├── structure.md            # Arborescence v1.7
-│   ├── architecture.md         # Fonctionnement Vite MPA + GitHub Pages
-│   ├── research-guidelines.md  # Guide pour rédiger un draft / mini-paper
-│   └── CHANGELOG.md
-│
-├── vite.config.js              # Build MPA (6 entrées HTML) + base GitHub Pages
+├── style.css                   # Thème minimaliste Dark/Light, responsive & accessibilité
+├── main.js                     # Menu mobile, thème persistant, filtres/recherche & copie
+├── vite.config.js              # Configuration Vite MPA (6 entrées + base './' GitHub Pages)
 ├── package.json
 ├── README.md
+├── SUPPORT.md
+├── CONTRIBUTORS.md
+│
+├── public/
+│   ├── hubresearch-logo.svg    # Logo servi à la racine par Vite
+│   ├── .nojekyll
+│   └── robots.txt
+│
+├── assets/                     # Médias/schémas sources (dist/assets/ est généré par Vite)
+├── docs/
+│   └── structure.md            # Documentation de l'architecture v1.7 Stable
+│
 └── .github/
-    ├── CODEOWNERS
-    ├── SECURITY.md             # Politique de divulgation responsable (cohérent cyber-analyse)
+    ├── SECURITY.md
     ├── CONTRIBUTING.md
     ├── PULL_REQUEST_TEMPLATE.md
     ├── ISSUE_TEMPLATE/
     │   ├── bug_report.md
     │   └── research_proposal.md
     └── workflows/
-        └── deploy.yml          # Build pnpm + vérif liens + déploiement GitHub Pages
+        └── deploy.yml          # Vérification dist/ + déploiement GitHub Pages
 ```
 
 ---
