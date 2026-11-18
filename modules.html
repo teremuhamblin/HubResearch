@@ -2,36 +2,93 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>HubResearch v1.6 — Modules</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script type="module" src="/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <title>HubResearch v1.7 Stable — Modules | MantraLab v3.0</title>
+  <meta name="description" content="Catalogue des modules actifs du MantraLab v3.0 : MantraCore, MantraOps, MantraAI et CyberOps Toolkit." />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HubResearch Modules — MantraLab v3.0" />
+  <meta property="og:description" content="Découvrez les modules actifs : MantraCore, MantraOps, MantraAI et CyberOps Toolkit." />
+  <meta property="og:image" content="./hubresearch-logo.svg" />
+
+  <!-- Sécurité côté client -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self' mailto:;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="icon" href="./hubresearch-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./main.js"></script>
 </head>
 <body data-page="modules">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
   <header class="hr-header">
-    <div class="hr-logo">
-      <img src="/public/hubresearch-logo.svg" alt="HubResearch Logo" />
-      <span>HubResearch v1.6</span>
-    </div>
-    <nav class="hr-nav">
-      <a href="/index.html">Accueil</a>
-      <a href="/lab.html">Lab</a>
-      <a href="/modules.html" class="active">Modules</a>
-      <a href="/research.html">Recherche</a>
-      <a href="/team.html">Équipe</a>
-      <a href="/contact.html">Contact</a>
+    <a class="hr-logo" href="./index.html" aria-label="HubResearch — Retour à l'accueil">
+      <img src="./hubresearch-logo.svg" alt="" width="32" height="32" />
+      <span>HubResearch <small class="hr-version">v1.7</small></span>
+    </a>
+
+    <button
+      class="hr-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="hr-nav" aria-label="Navigation principale">
+      <a href="./index.html">Accueil</a>
+      <a href="./lab.html">Lab</a>
+      <a href="./modules.html" class="active" aria-current="page">Modules</a>
+      <a href="./research.html">Recherche</a>
+      <a href="./team.html">Équipe</a>
+      <a href="./contact.html">Contact</a>
+      <button id="theme-toggle" class="hr-theme-btn" type="button" aria-label="Changer de thème">◐</button>
     </nav>
   </header>
 
-  <main class="hr-main">
-    <section class="hr-section">
-      <h1>Modules actifs</h1>
-      <p>Liste des principaux modules techniques du HubResearch v1.6.</p>
+  <main id="main-content" class="hr-main">
+    <section class="hr-section" aria-labelledby="modules-title">
+      <p class="hr-badge">Écosystème MantraLab v3.0</p>
+      <h1 id="modules-title">Modules actifs</h1>
+      <p>Liste des principaux modules techniques du HubResearch v1.7 Stable.</p>
+
+      <!-- Barre de recherche & filtres interactifs (pilotés par main.js) -->
+      <div class="hr-toolbar">
+        <div class="hr-filters" role="group" aria-label="Filtrer les modules par domaine">
+          <button class="hr-filter-btn active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="hr-filter-btn" type="button" data-filter="core" aria-pressed="false">Core</button>
+          <button class="hr-filter-btn" type="button" data-filter="ops" aria-pressed="false">Ops</button>
+          <button class="hr-filter-btn" type="button" data-filter="ai" aria-pressed="false">IA</button>
+          <button class="hr-filter-btn" type="button" data-filter="cyber" aria-pressed="false">CyberOps</button>
+        </div>
+
+        <div class="hr-search-wrap">
+          <label class="sr-only" for="module-search">Rechercher un module</label>
+          <input
+            id="module-search"
+            class="hr-search"
+            type="search"
+            placeholder="Filtrer (ex: CI/CD, drift, OSINT)..."
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <p id="modules-count" class="hr-meta" aria-live="polite">4 modules affichés</p>
     </section>
 
-    <section class="hr-section hr-grid">
-      <article class="module-card">
-        <h2>MantraCore</h2>
+    <section class="hr-section hr-grid" id="modules-grid" aria-label="Catalogue des modules">
+      <article class="module-card hr-card" data-category="core">
+        <div class="hr-card-head">
+          <h2>MantraCore</h2>
+          <span class="hr-status hr-status-stable">Stable</span>
+        </div>
         <p>Core d’ingénierie : architecture, configuration, base des pipelines.</p>
         <ul>
           <li>Config centralisée</li>
@@ -40,9 +97,12 @@
         </ul>
       </article>
 
-      <article class="module-card">
-        <h2>MantraOps</h2>
-        <p>Ops & CI/CD : build, tests, déploiement, observabilité.</p>
+      <article class="module-card hr-card" data-category="ops">
+        <div class="hr-card-head">
+          <h2>MantraOps</h2>
+          <span class="hr-status hr-status-stable">Stable</span>
+        </div>
+        <p>Ops &amp; CI/CD : build, tests, déploiement, observabilité (BashOps, PythonOps, ULTRA‑OPS).</p>
         <ul>
           <li>Workflows GitHub Actions</li>
           <li>Monitoring minimaliste</li>
@@ -50,8 +110,11 @@
         </ul>
       </article>
 
-      <article class="module-card">
-        <h2>MantraAI</h2>
+      <article class="module-card hr-card" data-category="ai">
+        <div class="hr-card-head">
+          <h2>MantraAI</h2>
+          <span class="hr-status hr-status-active">Actif</span>
+        </div>
         <p>Diagnostics IA : drift, safety, interpretability, métriques.</p>
         <ul>
           <li>Analyse de modèles</li>
@@ -60,8 +123,11 @@
         </ul>
       </article>
 
-      <article class="module-card">
-        <h2>CyberOps Toolkit</h2>
+      <article class="module-card hr-card" data-category="cyber">
+        <div class="hr-card-head">
+          <h2>CyberOps Toolkit</h2>
+          <span class="hr-status hr-status-active">Actif</span>
+        </div>
         <p>Outils cyber‑ops : OSINT, recon, crypto, réseau.</p>
         <ul>
           <li>Utilitaires JS</li>
@@ -70,10 +136,15 @@
         </ul>
       </article>
     </section>
+
+    <p id="modules-empty" class="hr-empty" hidden>
+      Aucun module ne correspond à votre filtre actuel.
+    </p>
   </main>
 
   <footer class="hr-footer">
-    <span>HubResearch v1.6 — Modules</span>
+    <span>HubResearch v1.7 Stable — Modules (MantraLab v3.0)</span>
+    <span>Engineering • AI • CyberOps • Research</span>
   </footer>
 </body>
 </html>
