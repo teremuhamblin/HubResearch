@@ -1,11 +1,60 @@
-📁 STRUCTURE.md — HubResearch
-
-STRUCTURE — HubResearch
+# 📁 STRUCTURE
+- STRUCTURE et ARBORESCENCE — HubResearch
 
 Ce document décrit l’architecture complète du projet HubResearch, son organisation interne, la fonction de chaque fichier et la logique globale du portail.
 
+# v1.7 Stable
+### 🏗️ Nouvelle structure v1.7 Stable (avec .github/, assets/ et docs/)
+- Attention à un détail important avec Vite :
+**assets/** (si utilisé pour CSS/JS/images importés) est traité et optimisé par Vite lors du pnpm build (avec hash de cache).
+
+**public/** sert les fichiers tels quels à la racine (hubresearch-logo.svg, robots.txt, sitemap.xml, .nojekyll).
+
+```text
+HubResearch/
+├── index.html                  # Accueil (Hero, axes, accès rapide modules & drafts)
+├── lab.html                    # Vision, mission, méthodologie MantraLab v3.0
+├── modules.html                # Projets actifs + filtres (MantraCore, MantraOps, MantraAI, BashOps, PythonOps, ULTRA-OPS)
+├── research.html               # Drafts, mini-papers, recherche & filtres par tags
+├── team.html                   # Contributeurs réels & personas/agents IA clairement badgés
+├── contact.html                # Point de contact, PGP/Security, GitHub Discussions
+│
+├── assets/                     # Ressources gérées par Vite (CSS, JS, illustrations)
+│   ├── css/
+│   │   └── style.css           # Thème minimaliste moderne (Dark/Light, variables CSS)
+│   ├── js/
+│   │   └── main.js             # Navigation mobile, filtres, thème, copier-citation
+│   └── img/                    # Schémas techniques, diagrammes, avatars
+│
+├── public/
+│   ├── hubresearch-logo.svg
+│   ├── robots.txt              # SEO
+│   └── .nojekyll               # Évite le traitement Jekyll parasite sur GitHub Pages
+│
+├── docs/                       # Documentation interne du dépôt
+│   ├── structure.md            # Arborescence v1.7
+│   ├── architecture.md         # Fonctionnement Vite MPA + GitHub Pages
+│   ├── research-guidelines.md  # Guide pour rédiger un draft / mini-paper
+│   └── CHANGELOG.md
+│
+├── vite.config.js              # Build MPA (6 entrées HTML) + base GitHub Pages
+├── package.json
+├── README.md
+└── .github/
+    ├── CODEOWNERS
+    ├── SECURITY.md             # Politique de divulgation responsable (cohérent cyber-analyse)
+    ├── CONTRIBUTING.md
+    ├── PULL_REQUEST_TEMPLATE.md
+    ├── ISSUE_TEMPLATE/
+    │   ├── bug_report.md
+    │   └── research_proposal.md
+    └── workflows/
+        └── deploy.yml          # Build pnpm + vérif liens + déploiement GitHub Pages
+```
+
 ---
 
+# v1.6 Initiale
 1. Vue d’ensemble
 
 HubResearch est un portail statique multi‑pages construit avec Vite.  
