@@ -1,0 +1,9 @@
+# Politique de divulgation de vulnérabilités — HubResearch (MantraLab v3.0)
+# Conforme RFC 9116 (https://securitytxt.org/)
+
+Contact: https://github.com/<OWNER>/<REPO>/security/advisories/new
+Contact: mailto:<EMAIL-SECURITE>
+Expires: 2027-11-18T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://<OWNER>.github.io/<REPO>/.well-known/security.txt
+Policy: https://github.com/<OWNER>/<REPO>/blob/main/.github/SECURITY.md
