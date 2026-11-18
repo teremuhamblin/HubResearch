@@ -2,30 +2,61 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>HubResearch v1.6 — Équipe</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script type="module" src="/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <title>HubResearch v1.7 Stable — Équipe | MantraLab v3.0</title>
+  <meta name="description" content="Contributeurs réels et fictifs du portail HubResearch v1.7 Stable : ingénierie systèmes, IA, cyber-analyse et sécurité." />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HubResearch Équipe — MantraLab v3.0" />
+  <meta property="og:description" content="Équipe mixte couvrant l’ingénierie, l’IA, la cyber-sécurité et la recherche." />
+  <meta property="og:image" content="./hubresearch-logo.svg" />
+
+  <!-- Sécurité côté client (autorise uniquement les avatars GitHub en plus du domaine local) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://avatars.githubusercontent.com; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self' mailto:;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="icon" href="./hubresearch-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./main.js"></script>
 </head>
 <body data-page="team">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
   <header class="hr-header">
-    <div class="hr-logo">
-      <img src="/public/hubresearch-logo.svg" alt="HubResearch Logo" />
-      <span>HubResearch v1.6</span>
-    </div>
-    <nav class="hr-nav">
-      <a href="/index.html">Accueil</a>
-      <a href="/lab.html">Lab</a>
-      <a href="/modules.html">Modules</a>
-      <a href="/research.html">Recherche</a>
-      <a href="/team.html" class="active">Équipe</a>
-      <a href="/contact.html">Contact</a>
+    <a class="hr-logo" href="./index.html" aria-label="HubResearch — Retour à l'accueil">
+      <img src="./hubresearch-logo.svg" alt="" width="32" height="32" />
+      <span>HubResearch <small class="hr-version">v1.7</small></span>
+    </a>
+
+    <button
+      class="hr-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="hr-nav" aria-label="Navigation principale">
+      <a href="./index.html">Accueil</a>
+      <a href="./lab.html">Lab</a>
+      <a href="./modules.html">Modules</a>
+      <a href="./research.html">Recherche</a>
+      <a href="./team.html" class="active" aria-current="page">Équipe</a>
+      <a href="./contact.html">Contact</a>
+      <button id="theme-toggle" class="hr-theme-btn" type="button" aria-label="Changer de thème">◐</button>
     </nav>
   </header>
 
-  <main class="hr-main">
-    <section class="hr-section">
-      <h1>Contributeurs HubResearch v1.6</h1>
+  <main id="main-content" class="hr-main">
+    <section class="hr-section" aria-labelledby="team-title">
+      <p class="hr-badge">MantraLab v3.0 • Équipe &amp; Personas</p>
+      <h1 id="team-title">Contributeurs HubResearch v1.7 Stable</h1>
       <p>
         Équipe mixte de collaborateurs réels et fictifs, couvrant l’ingénierie,
         l’IA, la cyber‑sécurité et la recherche.
@@ -35,32 +66,76 @@
       </p>
     </section>
 
-    <section class="hr-section hr-grid team-grid">
-      <article>
-        <img src="https://avatars.githubusercontent.com/u/10000001" alt="Aiden Flux" />
+    <section class="hr-section hr-grid team-grid" aria-label="Liste des contributeurs">
+      <article class="hr-card team-card">
+        <img
+          src="https://avatars.githubusercontent.com/u/10000001"
+          alt="Avatar de Aiden Flux"
+          width="88"
+          height="88"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+        <span class="hr-status hr-status-stable">Systèmes</span>
         <h2>Aiden Flux</h2>
-        <p>Ingénieur Systèmes</p>
+        <p class="role">Ingénieur Systèmes</p>
+        <a class="hr-card-link" href="./modules.html">Modules Core &amp; Ops →</a>
       </article>
-      <article>
-        <img src="https://avatars.githubusercontent.com/u/10000019" alt="Astra Neural" />
+
+      <article class="hr-card team-card">
+        <img
+          src="https://avatars.githubusercontent.com/u/10000019"
+          alt="Avatar de Astra Neural"
+          width="88"
+          height="88"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+        <span class="hr-status hr-status-active">IA &amp; Modèles</span>
         <h2>Astra Neural</h2>
-        <p>IA Researcher</p>
+        <p class="role">IA Researcher</p>
+        <a class="hr-card-link" href="./research.html">Travaux MantraAI →</a>
       </article>
-      <article>
-        <img src="https://avatars.githubusercontent.com/u/10000039" alt="ShadeVector" />
+
+      <article class="hr-card team-card">
+        <img
+          src="https://avatars.githubusercontent.com/u/10000039"
+          alt="Avatar de ShadeVector"
+          width="88"
+          height="88"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+        <span class="hr-status hr-status-active">CyberOps</span>
         <h2>ShadeVector</h2>
-        <p>Cyber Analyst</p>
+        <p class="role">Cyber Analyst</p>
+        <a class="hr-card-link" href="./research.html">Analyse réseau →</a>
       </article>
-      <article>
-        <img src="https://avatars.githubusercontent.com/u/10000059" alt="GhostByte" />
+
+      <article class="hr-card team-card">
+        <img
+          src="https://avatars.githubusercontent.com/u/10000059"
+          alt="Avatar de GhostByte"
+          width="88"
+          height="88"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+        <span class="hr-status hr-status-stable">Sécurité</span>
         <h2>GhostByte</h2>
-        <p>Ethical Hacker</p>
+        <p class="role">Ethical Hacker</p>
+        <a class="hr-card-link" href="./contact.html">Divulgation sécurité →</a>
       </article>
     </section>
   </main>
 
   <footer class="hr-footer">
-    <span>HubResearch v1.6 — Équipe</span>
+    <span>HubResearch v1.7 Stable — Équipe (MantraLab v3.0)</span>
+    <span>Engineering • AI • CyberOps • Research</span>
   </footer>
 </body>
 </html>
