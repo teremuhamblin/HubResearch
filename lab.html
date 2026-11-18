@@ -2,30 +2,61 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>HubResearch v1.6 — Lab</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script type="module" src="/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <title>HubResearch v1.7 Stable — Lab | Vision &amp; Méthodologie</title>
+  <meta name="description" content="Vision, méthodologie d'ingénierie et axes de recherche du MantraLab v3.0 : systèmes auditables, diagnostics IA et CyberOps." />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HubResearch Lab — MantraLab v3.0" />
+  <meta property="og:description" content="Vision, méthodologie et axes de recherche : Engineering Core, AI Diagnostics, CyberOps &amp; Research." />
+  <meta property="og:image" content="./hubresearch-logo.svg" />
+
+  <!-- Sécurité côté client -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self' mailto:;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="icon" href="./hubresearch-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./main.js"></script>
 </head>
 <body data-page="lab">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
   <header class="hr-header">
-    <div class="hr-logo">
-      <img src="/public/hubresearch-logo.svg" alt="HubResearch Logo" />
-      <span>HubResearch v1.6</span>
-    </div>
-    <nav class="hr-nav">
-      <a href="/index.html">Accueil</a>
-      <a href="/lab.html" class="active">Lab</a>
-      <a href="/modules.html">Modules</a>
-      <a href="/research.html">Recherche</a>
-      <a href="/team.html">Équipe</a>
-      <a href="/contact.html">Contact</a>
+    <a class="hr-logo" href="./index.html" aria-label="HubResearch — Retour à l'accueil">
+      <img src="./hubresearch-logo.svg" alt="" width="32" height="32" />
+      <span>HubResearch <small class="hr-version">v1.7</small></span>
+    </a>
+
+    <button
+      class="hr-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="hr-nav" aria-label="Navigation principale">
+      <a href="./index.html">Accueil</a>
+      <a href="./lab.html" class="active" aria-current="page">Lab</a>
+      <a href="./modules.html">Modules</a>
+      <a href="./research.html">Recherche</a>
+      <a href="./team.html">Équipe</a>
+      <a href="./contact.html">Contact</a>
+      <button id="theme-toggle" class="hr-theme-btn" type="button" aria-label="Changer de thème">◐</button>
     </nav>
   </header>
 
-  <main class="hr-main">
-    <section class="hr-section">
-      <h1>Vision & Méthodologie</h1>
+  <main id="main-content" class="hr-main">
+    <section class="hr-section" aria-labelledby="lab-title">
+      <p class="hr-badge">MantraLab v3.0 • Noyau R&amp;D</p>
+      <h1 id="lab-title">Vision &amp; Méthodologie</h1>
       <p>
         HubResearch est le noyau de recherche du MantraLab v3.0, dédié à
         l’ingénierie avancée, à l’analyse de modèles IA et aux opérations
@@ -33,13 +64,13 @@
       </p>
     </section>
 
-    <section class="hr-section two-columns">
+    <section class="hr-section two-columns" aria-label="Vision et méthodologie">
       <div>
         <h2>Vision</h2>
         <ul>
-          <li>Construire des systèmes robustes, auditable et scalables.</li>
+          <li>Construire des systèmes robustes, auditables et scalables.</li>
           <li>Rendre les modèles IA interprétables et mesurables.</li>
-          <li>Intégrer la cyber‑sécurité dès la conception.</li>
+          <li>Intégrer la cyber‑sécurité dès la conception (<em>Security by Design</em>).</li>
         </ul>
       </div>
       <div>
@@ -52,31 +83,58 @@
       </div>
     </section>
 
-    <section class="hr-section">
-      <h2>Axes principaux</h2>
+    <section class="hr-section" aria-labelledby="pipeline-title">
+      <h2 id="pipeline-title">Cycle de recherche (Pipeline)</h2>
       <div class="hr-grid">
-        <article>
+        <article class="hr-card">
+          <h3>01. Hypothèse</h3>
+          <p>Cadrage du problème, modèle de menace et définition des métriques de succès.</p>
+        </article>
+        <article class="hr-card">
+          <h3>02. Prototype</h3>
+          <p>Implémentation isolée, reproductible et sans dépendance superflue.</p>
+        </article>
+        <article class="hr-card">
+          <h3>03. Audit &amp; Benchmark</h3>
+          <p>Tests unitaires, analyse de dérive (drift), vérifications cyber et performance.</p>
+        </article>
+        <article class="hr-card">
+          <h3>04. Publication</h3>
+          <p>Intégration dans un module actif ou rédaction d'un draft dans <a class="hr-card-link" href="./research.html">Recherche →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="hr-section" aria-labelledby="axes-title">
+      <h2 id="axes-title">Axes principaux</h2>
+      <div class="hr-grid">
+        <article class="hr-card">
           <h3>Engineering Core</h3>
           <p>Architecture, pipelines, plateformes, observabilité.</p>
+          <a class="hr-card-link" href="./modules.html">Voir les modules →</a>
         </article>
-        <article>
+        <article class="hr-card">
           <h3>AI Diagnostics</h3>
           <p>Drift, safety, interpretability, métriques.</p>
+          <a class="hr-card-link" href="./modules.html">Explorer MantraAI →</a>
         </article>
-        <article>
+        <article class="hr-card">
           <h3>CyberOps</h3>
           <p>OSINT, recon, crypto, réseau, défense.</p>
+          <a class="hr-card-link" href="./modules.html">Outils CyberOps →</a>
         </article>
-        <article>
+        <article class="hr-card">
           <h3>Research</h3>
           <p>Drafts, notes, expérimentations contrôlées.</p>
+          <a class="hr-card-link" href="./research.html">Lire les notes →</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="hr-footer">
-    <span>HubResearch v1.6 — Lab</span>
+    <span>HubResearch v1.7 Stable — Lab (MantraLab v3.0)</span>
+    <span>Engineering • AI • CyberOps • Research</span>
   </footer>
 </body>
 </html>
