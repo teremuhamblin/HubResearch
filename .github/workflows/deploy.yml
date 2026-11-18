@@ -1,36 +1,69 @@
-name: Deploy HubResearch v1.6
+name: Build & Déploiement GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
+      - name: Récupérer le dépôt
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Configurer pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+          # Supprimez la ligne "version:" ci-dessus si "packageManager" est déjà défini dans package.json
+
+      - name: Configurer Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 22
           cache: "pnpm"
 
-      - name: Setup pnpm
-        run: corepack enable
+      - name: Installer les dépendances
+        run: pnpm install --frozen-lockfile || pnpm install
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build
+      - name: Build de production Vite
         run: pnpm build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Vérifier l'intégrité de dist/ (6 pages + logo)
+        run: |
+          for file in index.html lab.html modules.html research.html team.html contact.html hubresearch-logo.svg; do
+            if [ ! -f "dist/$file" ]; then
+              echo "Erreur : dist/$file est manquant !"
+              exit 1
+            fi
+          done
+          echo "Build dist/ validé avec succès."
+
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Uploader l'artefact Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          force_orphan: true
+          path: "./dist"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Déployer sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
