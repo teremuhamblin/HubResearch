@@ -4,9 +4,9 @@
 
 Portail technique dédié aux **explorations modernes en IA, diagnostics de modèles, cyber‑analyse et systèmes avancés** (*MantraLab v3.0*).
 
-![Version](https://img.shields.io/badge/Version-v1.7%20Stable-16A34A?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=0F172A)
-![Build](https://img.shields.io/badge/Vite-MPA%20Static-4FD1C5?style=for-the-badge&logo=vite&logoColor=0F172A&labelColor=0F172A)
-![Deploy](https://img.shields.io/badge/GitHub%20Pages-Auto%20Deploy-16A34A?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0F172A)
+![Version](https://img.shields.io/badge/Version-v1.7%20Stable-0F172A?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=0F172A)
+![Build](https://img.shields.io/badge/Vite-MPA%20Static-0F172A?style=for-the-badge&logo=vite&logoColor=0F172A&labelColor=0F172A)
+![Deploy](https://img.shields.io/badge/GitHub%20Pages-Auto%20Deploy-0F172A?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0F172A)
 
 ## ✨ Nouveautés v1.7 Stable
 
@@ -38,3 +38,28 @@ pnpm dev      # Développement local (http://localhost:5173)
 pnpm build    # Build de production dans dist/
 pnpm preview  # Prévisualisation du build (http://localhost:4173)
 ```
+
+## 📁 Documentation & Gouvernance
+##### Architecture complète :
+* **docs/structure.md**
+##### Support & Sécurité :
+* **SUPPORT.md • .github/SECURITY.md**
+##### Contributions :
+* **.github/CONTRIBUTING.md • CONTRIBUTORS.md**
+
+---
+
+---
+
+### 💡 Dernier rappel `.gitignore`
+- Vérifie que ton `.gitignore` à la racine contient bien :
+```gitignore
+node_modules/
+dist/
+.pnpm-store/
+*.local
+.DS_Store
+```
+
+* **Tu as maintenant **absolument tout** pour commiter et déployer**
+* **HubResearch v1.7 Stable** en production sur GitHub Pages !**
