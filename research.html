@@ -2,62 +2,126 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>HubResearch v1.6 — Recherche</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script type="module" src="/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <title>HubResearch v1.7 Stable — Équipe | MantraLab v3.0</title>
+  <meta name="description" content="Contributeurs, architectes et pôles de recherche du portail HubResearch (MantraLab v3.0)." />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HubResearch Équipe — MantraLab v3.0" />
+  <meta property="og:description" content="Découvrez les contributeurs et entités techniques de HubResearch." />
+  <meta property="og:image" content="./hubresearch-logo.svg" />
+
+  <!-- Sécurité côté client -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self' mailto:;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="icon" href="./hubresearch-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./main.js"></script>
 </head>
-<body data-page="research">
+<body data-page="team">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
   <header class="hr-header">
-    <div class="hr-logo">
-      <img src="/public/hubresearch-logo.svg" alt="HubResearch Logo" />
-      <span>HubResearch v1.6</span>
-    </div>
-    <nav class="hr-nav">
-      <a href="/index.html">Accueil</a>
-      <a href="/lab.html">Lab</a>
-      <a href="/modules.html">Modules</a>
-      <a href="/research.html" class="active">Recherche</a>
-      <a href="/team.html">Équipe</a>
-      <a href="/contact.html">Contact</a>
+    <a class="hr-logo" href="./index.html" aria-label="HubResearch — Retour à l'accueil">
+      <img src="./hubresearch-logo.svg" alt="" width="32" height="32" />
+      <span>HubResearch <small class="hr-version">v1.7</small></span>
+    </a>
+
+    <button
+      class="hr-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="hr-nav" aria-label="Navigation principale">
+      <a href="./index.html">Accueil</a>
+      <a href="./lab.html">Lab</a>
+      <a href="./modules.html">Modules</a>
+      <a href="./research.html">Recherche</a>
+      <a href="./team.html" class="active" aria-current="page">Équipe</a>
+      <a href="./contact.html">Contact</a>
+      <button id="theme-toggle" class="hr-theme-btn" type="button" aria-label="Changer de thème">◐</button>
     </nav>
   </header>
 
-  <main class="hr-main">
-    <section class="hr-section">
-      <h1>Notes techniques & drafts</h1>
+  <main id="main-content" class="hr-main">
+    <section class="hr-section" aria-labelledby="team-title">
+      <p class="hr-badge">MantraLab v3.0 • Contributeurs &amp; Pôles</p>
+      <h1 id="team-title">Équipe &amp; contributeurs</h1>
       <p>
-        Cette section regroupe les documents de travail, prototypes et notes
-        techniques du HubResearch v1.6.
+        HubResearch rassemble des ingénieurs, chercheurs et entités techniques
+        du MantraLab v3.0 autour de l’ingénierie logicielle, de l’IA et des CyberOps.
       </p>
     </section>
 
-    <section class="hr-section">
-      <h2>Drafts récents</h2>
-      <ul class="hr-list">
-        <li>
-          <strong>HR‑AI‑016</strong> — Diagnostic de drift sur modèles séquentiels.
-        </li>
-        <li>
-          <strong>HR‑ENG‑011</strong> — Pipeline CI/CD minimaliste pour projets multi‑modules.
-        </li>
-        <li>
-          <strong>HR‑CYB‑007</strong> — Analyse de flux réseau pour détection d’anomalies.
-        </li>
-      </ul>
+    <section class="hr-section hr-grid" aria-label="Membres et pôles techniques">
+      <article class="team-card hr-card">
+        <div class="hr-card-head">
+          <span class="hr-avatar" aria-hidden="true">AM</span>
+          <span class="hr-status hr-status-stable">Core &amp; Cyber</span>
+        </div>
+        <h2>A. Mantrix</h2>
+        <p class="role">Architecte Principal &amp; Lead CyberOps</p>
+        <p>Conception des systèmes MantraCore, MantraOps et pipelines avancés.</p>
+        <a class="hr-card-link" href="./modules.html">Voir MantraCore →</a>
+      </article>
+
+      <article class="team-card hr-card">
+        <div class="hr-card-head">
+          <span class="hr-avatar" aria-hidden="true">NV</span>
+          <span class="hr-status hr-status-active">IA &amp; Safety</span>
+        </div>
+        <h2>N. Vega</h2>
+        <p class="role">AI Diagnostics &amp; Safety</p>
+        <p>Analyse de drift, métriques, interprétabilité et audits de modèles.</p>
+        <a class="hr-card-link" href="./research.html">Voir HR‑AI‑016 →</a>
+      </article>
+
+      <article class="team-card hr-card">
+        <div class="hr-card-head">
+          <span class="hr-avatar" aria-hidden="true">KO</span>
+          <span class="hr-status hr-status-stable">Infra &amp; Ops</span>
+        </div>
+        <h2>K. Orion</h2>
+        <p class="role">Systems &amp; Automation</p>
+        <p>Infra, conteneurs, GitHub Actions, Codespaces et intégration continue.</p>
+        <a class="hr-card-link" href="./modules.html">Voir MantraOps →</a>
+      </article>
+
+      <article class="team-card hr-card">
+        <div class="hr-card-head">
+          <span class="hr-avatar" aria-hidden="true">SN</span>
+          <span class="hr-status hr-status-active">R&amp;D</span>
+        </div>
+        <h2>S. Nyx</h2>
+        <p class="role">Research &amp; Prototyping</p>
+        <p>Drafts techniques, expériences rapides, outils expérimentaux.</p>
+        <a class="hr-card-link" href="./research.html">Lire les drafts →</a>
+      </article>
     </section>
 
-    <section class="hr-section">
-      <h2>Prototypes</h2>
+    <section class="hr-section" aria-labelledby="join-title">
+      <h2 id="join-title">Contribuer au portail</h2>
       <p>
-        Les prototypes sont déployés sous forme de mini‑démos ou de modules
-        isolés, avec une documentation technique associée.
+        Vous souhaitez proposer un prototype, relire un draft ou soumettre une Pull Request ?
+        Consultez le guide de contribution du dépôt ou prenez contact avec le Lab.
       </p>
+      <a class="btn secondary" href="./contact.html">Prendre contact →</a>
     </section>
   </main>
 
   <footer class="hr-footer">
-    <span>HubResearch v1.6 — Recherche</span>
+    <span>HubResearch v1.7 Stable — Équipe (MantraLab v3.0)</span>
+    <span>Engineering • AI • CyberOps • Research</span>
   </footer>
 </body>
 </html>
