@@ -2,43 +2,119 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>HubResearch v1.6 — Contact</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script type="module" src="/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <title>HubResearch v1.7 Stable — Contact | MantraLab v3.0</title>
+  <meta name="description" content="Point de contact officiel HubResearch v1.7 Stable : support technique, collaborations de recherche et signalement sécurité." />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HubResearch Contact — MantraLab v3.0" />
+  <meta property="og:description" content="Support technique, collaboration MantraLab v3.0 et divulgation responsable." />
+  <meta property="og:image" content="./hubresearch-logo.svg" />
+
+  <!-- Sécurité côté client -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'self'; form-action 'self' mailto:;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="icon" href="./hubresearch-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./main.js"></script>
 </head>
 <body data-page="contact">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
   <header class="hr-header">
-    <div class="hr-logo">
-      <img src="/public/hubresearch-logo.svg" alt="HubResearch Logo" />
-      <span>HubResearch v1.6</span>
-    </div>
-    <nav class="hr-nav">
-      <a href="/index.html">Accueil</a>
-      <a href="/lab.html">Lab</a>
-      <a href="/modules.html">Modules</a>
-      <a href="/research.html">Recherche</a>
-      <a href="/team.html">Équipe</a>
-      <a href="/contact.html" class="active">Contact</a>
+    <a class="hr-logo" href="./index.html" aria-label="HubResearch — Retour à l'accueil">
+      <img src="./hubresearch-logo.svg" alt="" width="32" height="32" />
+      <span>HubResearch <small class="hr-version">v1.7</small></span>
+    </a>
+
+    <button
+      class="hr-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="hr-nav" aria-label="Navigation principale">
+      <a href="./index.html">Accueil</a>
+      <a href="./lab.html">Lab</a>
+      <a href="./modules.html">Modules</a>
+      <a href="./research.html">Recherche</a>
+      <a href="./team.html">Équipe</a>
+      <a href="./contact.html" class="active" aria-current="page">Contact</a>
+      <button id="theme-toggle" class="hr-theme-btn" type="button" aria-label="Changer de thème">◐</button>
     </nav>
   </header>
 
-  <main class="hr-main">
-    <section class="hr-section">
-      <h1>Contact officiel</h1>
+  <main id="main-content" class="hr-main">
+    <section class="hr-section" aria-labelledby="contact-title">
+      <p class="hr-badge">Canaux officiels • v1.7 Stable</p>
+      <h1 id="contact-title">Contact officiel</h1>
       <p>
         Pour toute question technique, demande de collaboration ou retour sur
-        les modules HubResearch v1.6 :
+        les modules HubResearch v1.7 Stable (MantraLab v3.0) :
       </p>
       <ul>
         <li>Ouvrir une issue GitHub avec le tag <code>support</code>.</li>
         <li>Utiliser les guidelines de <code>SUPPORT.md</code>.</li>
       </ul>
     </section>
+
+    <section class="hr-section hr-grid" aria-label="Canaux de contact par besoin">
+      <article class="hr-card">
+        <div class="hr-card-head">
+          <h2>Support technique</h2>
+          <span class="hr-status hr-status-stable">Tag : support</span>
+        </div>
+        <p>
+          Questions d’installation, bugs sur les modules ou retours d’usage
+          selon les consignes de <code>SUPPORT.md</code>.
+        </p>
+        <button
+          class="hr-copy-btn"
+          type="button"
+          data-copy="### Demande Support HubResearch v1.7&#10;- **Module concerné :** &#10;- **Environnement (OS / Node / pnpm) :** &#10;- **Description :** "
+        >
+          Copier le modèle d'issue
+        </button>
+      </article>
+
+      <article class="hr-card">
+        <div class="hr-card-head">
+          <h2>Sécurité &amp; CyberOps</h2>
+          <span class="hr-status hr-status-active">Privé</span>
+        </div>
+        <p>
+          Pour signaler une vulnérabilité ou une fuite potentielle, suivez
+          impérativement la procédure confidentielle décrite dans
+          <code>.github/SECURITY.md</code> (ne pas ouvrir d’issue publique).
+        </p>
+      </article>
+
+      <article class="hr-card">
+        <div class="hr-card-head">
+          <h2>Recherche &amp; Contributions</h2>
+          <span class="hr-status hr-status-active">MantraLab</span>
+        </div>
+        <p>
+          Propositions de nouveaux drafts (<code>HR-*</code>), prototypes ou
+          améliorations via Pull Request selon <code>.github/CONTRIBUTING.md</code>.
+        </p>
+        <a class="hr-card-link" href="./research.html">Voir les travaux en cours →</a>
+      </article>
+    </section>
   </main>
 
   <footer class="hr-footer">
-    <span>HubResearch v1.6 — Contact</span>
+    <span>HubResearch v1.7 Stable — Contact (MantraLab v3.0)</span>
+    <span>Engineering • AI • CyberOps • Research</span>
   </footer>
 </body>
 </html>
